@@ -35,7 +35,7 @@ export default function SignInSide() {
     const [ error , setError ] = useState(null);
 
     const handleLogin = (values) => {
-        if(values.email === 'admin.com' && values.password ==='admin') {
+        if(values.email === 'admin@yahoo.com' && values.password ==='admin') {
             setError(null);
             history.push("/dashboard")
         } else {
@@ -46,7 +46,7 @@ export default function SignInSide() {
 
     const formik = useFormik({
         initialValues: {
-            email: 'admin.com',
+            email: 'admin@yahoo.com',
             password: 'admin',
         },
         validationSchema: validationSchema,
